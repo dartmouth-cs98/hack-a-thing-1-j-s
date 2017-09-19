@@ -9,6 +9,7 @@ export default class App extends Component {
     return (
       <View style={styles.container}>
         <ScrollableTabView
+          style={styles.tabViewMargins}
           renderTabBar={() => <DefaultTabBar />}
         >
           <Stopwatch tabLabel="Stopwatch" />
@@ -20,6 +21,9 @@ export default class App extends Component {
 }
 
 const styles = StyleSheet.create({
+  tabViewMargins: {
+    marginTop: 20,
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
