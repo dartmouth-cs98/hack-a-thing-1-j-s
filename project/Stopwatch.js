@@ -11,7 +11,7 @@ const formattedSeconds = (mSec) =>
   ('0' + Math.floor(mSec / 60000)).slice(-2) + ':' + ('0' + (Math.floor(mSec % 60000 / 1000))).slice(-2) + '.' + ('0' + mSec / 10).slice(-2);
 
 
-export default class Timer extends Component {
+export default class Stopwatch extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -48,7 +48,8 @@ export default class Timer extends Component {
 
   render() {
     return (
-      <View className="stopwatch">
+      <View style={styles.container} className="stopwatch">
+        <Text style={styles.bigred}>Start stopwatch!</Text>
         <Text className="stopwatch-timer" style={styles.timerText}>{formattedSeconds(this.state.milliSecondsElapsed)}</Text>
 
         {(this.state.milliSecondsElapsed === 0 ||
@@ -73,6 +74,13 @@ const styles = StyleSheet.create({
     fontFamily: 'Cochin',
   },
   container: {
-    backgroundColor: '#77f',
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  bigred: {
+    color: 'red',
+    fontWeight: 'bold',
+    fontSize: 30,
   },
 });

@@ -12,7 +12,13 @@ Both partners were present and collaborating for every part of the project.
 
 James focused on setting up the react-native app from the original tutorial, and got a basic hello world program with some styling running.
 
-Shash focused on implementing the timer and styling it, along with other components.
+Shash focused on implementing the timer and styling it, along with setting up the app's scrollable view.
+
+### External Packages
+
+In addition to the default React Native classes, we used an external package for our Scrollable View:
+
+https://github.com/skv-headless/react-native-scrollable-tab-view
 
 ### What we Learned
 
