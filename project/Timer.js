@@ -1,9 +1,9 @@
-mport React, { Component } from 'react';
+import React, { Component } from 'react';
 import { AppRegistry, Text, StyleSheet, Button, View} from 'react-native';
 
 /* Adapted from broken timer code here: https://codepen.io/seoh/pen/PPZYQy */
 
-/* 
+/*
 * Minutes are allowed to be incremented indefinitely
 * Format is Minutes, Seconds, Milliseconds
 */
