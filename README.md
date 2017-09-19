@@ -7,7 +7,7 @@ Since neither of us had used react-native, and only one of us has any experience
 We set up react-native locally based on this [tutorial](https://github.com/react-community/create-react-native-app).
 
 Clock:
-[clock](Clock.png)
+![clock](Clock.png "Clock")
 
 Stopwatch:
 
