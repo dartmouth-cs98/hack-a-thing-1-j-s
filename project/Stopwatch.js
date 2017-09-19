@@ -54,14 +54,14 @@ export default class Stopwatch extends Component {
 
         {(this.state.milliSecondsElapsed === 0 ||
           this.incrementer === this.state.lastClearedIncrementer
-            ? <Button title='Start' onPress={this.handleStartClick} />
-            : <Button title='Stop' onPress={this.handleStopClick} />
+            ? <Button color='mediumblue' title='Start' onPress={this.handleStartClick} />
+            : <Button color='mediumblue' title='Stop' onPress={this.handleStopClick} />
         )}
 
         {(this.state.milliSecondsElapsed !== 0 &&
           this.incrementer === this.state.lastClearedIncrementer
-            ? <Button title='Reset' onPress={this.handleResetClick} />
-            : null
+            ? <Button color='maroon' title='Reset' onPress={this.handleResetClick} />
+          : <Button color='maroon' title='Reset' onPress={this.handleResetClick} disabled={true} />
         )}
 
       </View>
@@ -72,15 +72,20 @@ export default class Stopwatch extends Component {
 const styles = StyleSheet.create({
   timerText: {
     fontFamily: 'Cochin',
+    fontSize: 50,
+    marginBottom: 15,
   },
   container: {
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+    paddingBottom: 50,
+    backgroundColor: 'lightslategray'
   },
   bigred: {
-    color: 'red',
+    color: 'maroon',
     fontWeight: 'bold',
     fontSize: 30,
+    marginBottom: 20,
   },
 });
