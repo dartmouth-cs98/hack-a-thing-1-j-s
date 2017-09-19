@@ -1,19 +1,16 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { Component } from 'react';
+import { AppRegistry, Text, Button, View, Alert, StyleSheet } from 'react-native';
 
-export default class App extends React.Component {
+export default class HelloWorldApp extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <View style={styles.helloWorld}>
-          <Text>Hello World - James</Text>
-        </View>
-        <View style={styles.container}>
-          <Text>Open up App.js to start working on your app!</Text>
-          <Text>Changes you make will automatically reload.</Text>
-          <Text>Shake your phone to open the developer menu.</Text>
-        </View>
-      </View>
+        <Text style={styles.bigblue}>Hello world!</Text>
+        <Button
+          onPress={() => { Alert.alert('You tapped the button!')}}
+          title="Press Me"
+        />
+    </View>
     );
   }
 }
@@ -21,14 +18,15 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
   },
-  helloWorld: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
+  bigblue: {
+    color: 'blue',
+    fontWeight: 'bold',
+    fontSize: 30,
+  },
+  red: {
+    color: 'red',
   },
 });
