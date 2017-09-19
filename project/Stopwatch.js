@@ -49,17 +49,26 @@ export default class Stopwatch extends Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.bigred}>Start stopwatch!</Text>
+        {(this.state.milliSecondsElapsed === 0 && this.incrementer === this.state.lastClearedIncrementer
+            ? <Text style={styles.bigred}>Start stopwatch!</Text>
+            : null
+        )}
+        {(this.state.milliSecondsElapsed !== 0 && this.incrementer !== this.state.lastClearedIncrementer
+            ? <Text style={styles.bigred}>Stop stopwatch!</Text>
+            : null
+        )}
+        {(this.state.milliSecondsElapsed !== 0 && this.incrementer === this.state.lastClearedIncrementer
+            ? <Text style={styles.bigred}>Restart/Reset stopwatch!</Text>
+            : null
+        )}
         <Text style={styles.timerText}>{formattedSeconds(this.state.milliSecondsElapsed)}</Text>
 
-        {(this.state.milliSecondsElapsed === 0 ||
-          this.incrementer === this.state.lastClearedIncrementer
+        {(this.state.milliSecondsElapsed === 0 || this.incrementer === this.state.lastClearedIncrementer
             ? <Button title='Start' onPress={this.handleStartClick} />
             : <Button title='Stop' onPress={this.handleStopClick} />
         )}
 
-        {(this.state.milliSecondsElapsed !== 0 &&
-          this.incrementer === this.state.lastClearedIncrementer
+        {(this.state.milliSecondsElapsed !== 0 && this.incrementer === this.state.lastClearedIncrementer
             ? <Button title='Reset' onPress={this.handleResetClick} />
             : null
         )}
