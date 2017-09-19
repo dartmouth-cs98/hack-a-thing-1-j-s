@@ -5,7 +5,7 @@ import { AppRegistry, Text, StyleSheet, Button, View} from 'react-native';
 
 /*
 * Minutes are allowed to be incremented indefinitely
-* Format is Minutes, Seconds, Milliseconds
+* Format is Minutes, Seconds, Hundredths of seconds
 */
 const formattedSeconds = (mSec) =>
   ('0' + Math.floor(mSec / 60000)).slice(-2) + ':' + ('0' + (Math.floor(mSec % 60000 / 1000))).slice(-2) + '.' + ('0' + mSec / 10).slice(-2);
@@ -48,19 +48,19 @@ export default class Stopwatch extends Component {
 
   render() {
     return (
-      <View style={styles.container} className="stopwatch">
+      <View style={styles.container}>
         <Text style={styles.bigred}>Start stopwatch!</Text>
-        <Text className="stopwatch-timer" style={styles.timerText}>{formattedSeconds(this.state.milliSecondsElapsed)}</Text>
+        <Text style={styles.timerText}>{formattedSeconds(this.state.milliSecondsElapsed)}</Text>
 
         {(this.state.milliSecondsElapsed === 0 ||
           this.incrementer === this.state.lastClearedIncrementer
-            ? <Button className="start-btn" title='Start' onPress={this.handleStartClick}>start</Button>
-            : <Button className="stop-btn" title='Stop' onPress={this.handleStopClick}>stop</Button>
+            ? <Button title='Start' onPress={this.handleStartClick} />
+            : <Button title='Stop' onPress={this.handleStopClick} />
         )}
 
         {(this.state.milliSecondsElapsed !== 0 &&
           this.incrementer === this.state.lastClearedIncrementer
-            ? <Button title='Reset' onPress={this.handleResetClick}>reset</Button>
+            ? <Button title='Reset' onPress={this.handleResetClick} />
             : null
         )}
 

@@ -1,14 +1,5 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, StyleSheet, Button, View} from 'react-native';
-
-/* Adapted from broken timer code here: https://codepen.io/seoh/pen/PPZYQy */
-
-/*
-* Minutes are allowed to be incremented indefinitely
-* Format is Minutes, Seconds, Milliseconds
-*/
-const formattedSeconds = (mSec) =>
-  ('0' + Math.floor(mSec / 60000)).slice(-2) + ':' + ('0' + (Math.floor(mSec % 60000 / 1000))).slice(-2) + '.' + ('0' + mSec / 10).slice(-2);
+import { AppRegistry, Text, StyleSheet, View} from 'react-native';
 
 
 export default class Clock extends Component {
@@ -30,7 +21,7 @@ export default class Clock extends Component {
 
   render() {
     return (
-      <View style={styles.container} className="stopwatch">
+      <View style={styles.container}>
         <Text style={styles.bigred}>Clock</Text>
         <Text style={styles.timerText}>{this.state.curTime}</Text>
       </View>
