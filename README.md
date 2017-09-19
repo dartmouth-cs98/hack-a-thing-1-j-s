@@ -12,7 +12,7 @@ Both partners were present and collaborating for every part of the project.
 
 James focused on setting up the react-native app from the original tutorial, and got a basic hello world program with some styling running.
 
-Shash focused on implementing the timer and styling the components.
+Shash focused on implementing the timer and styling it, along with other components.
 
 ### What we Learned
 
