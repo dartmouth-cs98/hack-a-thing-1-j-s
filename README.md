@@ -10,7 +10,9 @@ We set up react-native locally based on this [tutorial](https://github.com/react
 
 [Clock](Clock.png)
 
-[Stopwatch]()
+[Stopwatch Before Starting](notstarted.png)
+[Stopwatch Running](running.png)
+[Stopwatch Stopped](reset.png)
 
 ### Division of Work
 
