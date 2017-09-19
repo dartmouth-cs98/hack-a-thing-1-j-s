@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { AppRegistry, Text, StyleSheet, View} from 'react-native';
 
-
 export default class Clock extends Component {
   constructor(props) {
     super(props);
@@ -46,10 +45,5 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: 'lightyellow',
-  },
-  bigred: {
-    color: 'red',
-    fontWeight: 'bold',
-    fontSize: 30,
   },
 });
