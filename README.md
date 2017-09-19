@@ -6,10 +6,11 @@
 Since neither of us had used react-native, and only one of us has any experience with React, we decided to explore creating a simple stopwatch/clock app using react-native.
 We set up react-native locally based on this [tutorial](https://github.com/react-community/create-react-native-app).
 
-Clock:
-![clock](Clock.png "Clock")
+### Screenshots
 
-Stopwatch:
+[Clock](Clock.png)
+
+[Stopwatch]()
 
 ### Division of Work
 
